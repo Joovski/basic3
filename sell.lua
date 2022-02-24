@@ -1,14 +1,20 @@
-local plr = game:service"Players".LocalPlayer;
-local tween_s = game:service"TweenService";
-local info = TweenInfo.new(5,Enum.EasingStyle.Quad);
+-- Sell
+local _speed=80
 function tp(...)
-   local tic_k = tick();
-   local params = {...};
-   local cframe = CFrame.new(params[1],params[2],params[3]);
-   local tween,err = pcall(function()
-       local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
-       tween:Play();
-   end)
-   if not tween then return err end
+   local plr=game.Players.LocalPlayer
+   local args={...}
+   if typeof(args[1])=="number"and args[2]and args[3]then
+      args=Vector3.new(args[1],args[2],args[3])
+   elseif typeof(args[1])=="Vector3" then
+       args=args[1]    
+   elseif typeof(args[1])=="CFrame" then
+       args=args[1].Position
+   end
+   local dist=(plr.Character.HumanoidRootPart.Position-args).Magnitude
+   game:GetService("TweenService"):Create(
+       plr.Character.HumanoidRootPart,
+       TweenInfo.new(dist/_speed,Enum.EasingStyle.Linear),
+       {CFrame=CFrame.new(args)}
+   ):Play()
 end
-tp(-0.83, -9.38, -25.76);
+tp(Vector3.new(-0.83, -9.38, -25.76))
