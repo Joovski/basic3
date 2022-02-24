@@ -1,5 +1,5 @@
 -- Bank
-local _speed=80
+local _speed=75
 function tp(...)
    local plr=game.Players.LocalPlayer
    local args={...}
