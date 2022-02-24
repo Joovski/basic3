@@ -1,4 +1,4 @@
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-238.36, 5.55, 116.7)
+--[[ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-238.36, 5.55, 116.7)
 wait(1)
 local args = {
     [1] = "bank_dealer",
