@@ -17,4 +17,4 @@ function tp(...)
        {CFrame=CFrame.new(args)}
    ):Play()
 end
-tp(Vector3.new(-0.83, -9.38, -25.76))
+tp(Vector3.new(-11.98, 2.9, 2.6))
