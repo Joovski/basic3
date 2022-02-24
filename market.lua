@@ -1,4 +1,4 @@
-local _speed=75
+local _speed=80
 function tp(...)
    local plr=game.Players.LocalPlayer
    local args={...}
