@@ -1,4 +1,4 @@
---[[ Sell
+--[[ Dealer
 local _speed=80
 function tp(...)
    local plr=game.Players.LocalPlayer
