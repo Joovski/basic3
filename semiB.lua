@@ -107,5 +107,7 @@ tp(Vector3.new(-245.8, 5.45, 94.48))
 wait(2)
 local clickdetector = game:GetService("Workspace").Map.Buildings.Bank.Rob.Init.screen.ClickDetector
 fireclickdetector(clickdetector)
+wait(2)
+print("done")
 
 
