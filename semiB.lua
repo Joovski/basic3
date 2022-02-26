@@ -104,7 +104,7 @@ function tp(...)
 end
 tp(Vector3.new(-245.8, 5.45, 94.48))
 -- C4 Bank
-wait(2)
+wait(5)
 local clickdetector = game:GetService("Workspace").Map.Buildings.Bank.Rob.Init.screen.ClickDetector
 fireclickdetector(clickdetector)
 wait(2)
